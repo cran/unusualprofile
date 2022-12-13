@@ -1,7 +1,7 @@
 Type: Package
 Package: unusualprofile
 Title: Calculates Conditional Mahalanobis Distances
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
     person("W. Joel", "Schneider", , "w.joel.schneider@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-8393-5316")),
@@ -29,11 +29,11 @@ VignetteBuilder: knitr
 Encoding: UTF-8
 Language: en-US
 LazyData: TRUE
-RoxygenNote: 7.2.2
+RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2022-11-30 00:20:01 UTC; renee
+Packaged: 2022-12-13 22:47:46 UTC; renee
 Author: W. Joel Schneider [aut, cre] (<https://orcid.org/0000-0002-8393-5316>),
   Feng Ji [aut]
 Maintainer: W. Joel Schneider <w.joel.schneider@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-11-30 00:40:02 UTC
+Date/Publication: 2022-12-13 23:00:03 UTC

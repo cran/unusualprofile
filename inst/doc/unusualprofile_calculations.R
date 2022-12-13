@@ -10,7 +10,7 @@ knitr::opts_chunk$set(
   fig.height = 7.2916667,
   message = FALSE,
   warning = FALSE,
-  cache = F
+  cache = FALSE
 )
 
 library(dplyr)
@@ -22,7 +22,7 @@ library(simstandard)
 library(unusualprofile)
 
 ## ----more-setup, echo=FALSE---------------------------------------------------
-myfont <- "sans"
+myfont <- "Titillium Web"
 
 # font_add_google("Titillium Web", "Titillium Web")
 theme_set(theme_minimal(16, base_family = myfont))
@@ -53,7 +53,6 @@ PropRound <- function(p, maxDigits = 10) {
     }
     gsub(" ", "", pp[i])
   }
-  
   return(gsub(" ", "", pp))
 }
 
@@ -110,7 +109,7 @@ knitr::include_graphics("One_dimensional.svg")
 tibble(
   Variable = paste0("italic(X)[", 1:4, "]"),
   Score = X,
-  vjust = c(1.5,-0.5, 1.5, 1.5)
+  vjust = c(1.5, -0.5, 1.5, 1.5)
 ) %>%
   ggplot(aes(Variable, Score)) +
   geom_normalviolin(aes(mu = 0, sigma = 1), fill = "gray", alpha = .4) +
@@ -120,8 +119,9 @@ tibble(
   geom_hline(yintercept = d$X_Composite) +
   scale_x_discrete(
     NULL,
-    labels = function(l)
+    labels = function(l) {
       parse(text = l)
+      }
   ) +
   scale_y_continuous() +
   annotate(
@@ -204,7 +204,7 @@ R_all <- D_root_inverted %*% Sigma %*% D_root_inverted
 R_all
 
 ## ----cor2cov------------------------------------------------------------------
-# Convert covariance matrix to correlations 
+# Convert covariance matrix to correlations
 R_all <- cov2cor(Sigma)
 
 R_all
