@@ -181,7 +181,7 @@ Sigma
 ## ----Sigma-matrix, results='asis', echo = FALSE-------------------------------
 cat(paste0("$$\\Sigma \\approx ", bmatrix(Sigma), "$$"))
 
-## ---- ref.label="sigma-calculations", echo = TRUE-----------------------------
+## ----ref.label="sigma-calculations", echo = TRUE------------------------------
 Sigma <- (t(w) %*% R_X %*% w)
 Sigma
 
